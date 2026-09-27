@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Becz | Senior Technical Recruiter & Talent Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            accent: '#2563eb',
+                            cyber: '#059669',
+                            ai: '#0891b2',
+                            graphics: '#4f46e5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .toast-slide {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-brand-50 text-slate-800 font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 toast-slide bg-brand-900 text-white px-5 py-3 rounded-lg shadow-xl border border-slate-700 flex items-center space-x-3 pointer-events-none">
+        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span id="toast-msg" class="text-sm font-medium">Copied to clipboard!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-header border-b border-slate-200/80">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="group flex items-center space-x-2">
+                <span class="text-xl font-bold tracking-tight text-brand-900 group-hover:text-brand-accent transition-colors">ALEX BECZ</span>
+                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-slate-600">Sr. TA Leader</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-brand-900 transition-colors">About</a>
+                <a href="#expertise" class="hover:text-brand-900 transition-colors">Specialized Domains</a>
+                <a href="#experience" class="hover:text-brand-900 transition-colors">Impact & Track Record</a>
+                <a href="#competencies" class="hover:text-brand-900 transition-colors">Skills</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="openResumeModal()" class="inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-semibold bg-slate-100 hover:bg-slate-200 text-slate-800 transition-colors border border-slate-200">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <span>View CV</span>
+                </button>
+                <a href="mailto:alexanderhbecz@gmail.com" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-semibold bg-brand-900 hover:bg-slate-800 text-white transition-all shadow-sm hover:shadow">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="pt-28 pb-20">
+
+        <!-- Hero Section -->
+        <section id="about" class="max-w-6xl mx-auto px-6 pt-12 pb-16">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-brand-accent text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                    <span>12+ Years Sourcing Technical Excellence</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-brand-900 leading-[1.15] mb-6">
+                    Engineering Elite Teams across AI, Cybersecurity & Graphics.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 font-normal leading-relaxed mb-8">
+                    Relentless Talent Acquisition Leader driving high-impact technical recruitment for high-growth tech companies and enterprise domain leaders. Specialized in building mission-critical engineering pipelines from Staff ICs to Executive Leadership.
+                </p>
+
+                <!-- Quick Action Button Row -->
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="https://www.linkedin.com/in/alxhb/" target="_blank" rel="noopener" class="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-brand-accent hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md hover:shadow-lg">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                        <span>Connect on LinkedIn</span>
+                    </a>
+                    <button onclick="copyToClipboard('alexanderhbecz@gmail.com', 'Email copied to clipboard!')" class="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-700 hover:text-brand-900 font-semibold text-sm transition-all shadow-sm">
+                        <svg class="w-5 h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>alexanderhbecz@gmail.com</span>
+                    </button>
+                    <a href="https://github.com/septimius72" target="_blank" rel="noopener" class="p-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 text-slate-600 hover:text-brand-900 transition-all shadow-sm" title="GitHub Profile">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <div>
+                    <div class="text-3xl font-bold text-brand-900">12+ Years</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">TA Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-900">$25M+</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Revenue Generated</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-accent">40%</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Time-To-Fill Cut</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-brand-900">250%</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">DEI Hire Growth</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Technical Focus Areas Section -->
+        <section id="expertise" class="max-w-6xl mx-auto px-6 py-12">
+            <div class="mb-10">
+                <h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Core Recruiting Pillars</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-brand-900">
+                    <a href="https://proximoalex.weebly.com/recruiting.html" target="_blank" rel="noopener" class="hover:text-brand-accent hover:underline transition-colors">
+                        recruiting / Specialized Domain Technical Sourcing
+                    </a>
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Pillar 1: AI & GenAI -->
+                <a href="https://proximoalex.weebly.com/" target="_blank" rel="noopener" class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all group block">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center text-brand-ai mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-900 group-hover:text-brand-accent transition-colors mb-3">Artificial Intelligence & ML</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Leveraging AI-assisted recruitment stack (Gemini, ChatGPT, Prompt Engineering) for hyper-personalized candidate sequencing and sourcing AI/ML Engineers, Data Scientists, and LLM Specialists.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">ML Engineers</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Prompt Engineering</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Python/FastAPI</span>
+                    </div>
+                </a>
+
+                <!-- Pillar 2: Cybersecurity -->
+                <a href="https://proximoalex.weebly.com/cybersecurity.html" target="_blank" rel="noopener" class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all group block">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-brand-cyber mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-900 group-hover:text-brand-cyber transition-colors mb-3">Cybersecurity & Security</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Deep expertise recruiting global enterprise security talent (Proofpoint veteran). Sourcing Reverse Engineers, Vulnerability Researchers, SecOps, and Security Architects across US, EMEA, LATAM & APJ.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Reverse Engineering</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">OSINT</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">SecOps</span>
+                    </div>
+                </a>
+
+                <!-- Pillar 3: Graphics & Tech Stack -->
+                <a href="https://proximoalex.weebly.com/ai-art.html" target="_blank" rel="noopener" class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all group block">
+                    <div class="w-12 h-12 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-brand-graphics mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-brand-900 group-hover:text-brand-graphics transition-colors mb-3">Graphics & High-Perf Systems</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                        Passion for high-performance graphics engineering, backend systems, and technical design cycles. Proven success sourcing Staff Engineers in C#/.NET, Go, Python, and C++.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">Senior/Staff Engineers</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">C# / .NET / Go</span>
+                        <span class="px-2.5 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md">SDETs & Infrastructure</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Professional Career Timeline Section -->
+        <section id="experience" class="max-w-6xl mx-auto px-6 py-12">
+            <div class="mb-10">
+                <h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Track Record</h2>
+                <h3 class="text-2xl sm:text-3xl font-bold text-brand-900">Professional Experience Highlights</h3>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Filevine -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-900">Senior Technical Recruiter & AI Talent Partner</h4>
+                            <div class="text-sm font-semibold text-brand-accent">Filevine • Salt Lake City, UT</div>
+                        </div>
+                        <span class="inline-flex px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold self-start sm:self-auto">May 2025 – Present</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                        <li>Built AI-driven recruitment architecture utilizing Gemini & ChatGPT for hyper-personalized candidate sequencing and competitive market mapping.</li>
+                        <li>Sourced and hired high-impact Software Engineers and specialized ML/AI Engineers in Czechia & EMEA expansion.</li>
+                        <li>Hired 16 BDRs/SDRs in first 3 weeks, setting hiring speed and volume records in the company's 10-year history.</li>
+                    </ul>
+                </div>
+
+                <!-- OrionIG -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-900">Senior TA Specialist</h4>
+                            <div class="text-sm font-semibold text-slate-600">OrionIG • Murray, UT</div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500">June 2024 – May 2025</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                        <li>Built strong candidate pipelines across SaaS, Health Tech, FinTech, and AI/ML, increasing talent pipelining by 110%.</li>
+                        <li>Utilized advanced sourcing patterns including extended Boolean, filetype X-raying, and natural language search.</li>
+                    </ul>
+                </div>
+
+                <!-- Proofpoint -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-900">Senior Technical Recruiter</h4>
+                            <div class="text-sm font-semibold text-slate-600">Proofpoint • Draper, UT</div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500">February 2022 – May 2024</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                        <li>Executed global recruiting strategies for enterprise cybersecurity across US, EMEA, LATAM, and APJ.</li>
+                        <li>Achieved 120% presence growth in Argentina and managed/mentored a high-performing team of 5 recruiters.</li>
+                    </ul>
+                </div>
+
+                <!-- Myriad Genetics -->
+                <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-slate-300 transition-all">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-brand-900">Lead Technical Recruiter</h4>
+                            <div class="text-sm font-semibold text-slate-600">Myriad Genetics • Salt Lake City, UT</div>
+                        </div>
+                        <span class="text-xs font-semibold text-slate-500">March 2020 – January 2022</span>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                        <li>Led full-lifecycle technical and GTM recruitment while overseeing a team of 6 talent acquisition members.</li>
+                        <li>Pioneered diversity-focused (DEI) recruiting initiatives, increasing diversity hires by 250%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Competencies Section -->
+        <section id="competencies" class="max-w-6xl mx-auto px-6 py-12">
+            <div class="p-8 sm:p-10 rounded-2xl bg-brand-900 text-white shadow-xl">
+                <div class="mb-8">
+                    <h2 class="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">Technical Toolkit</h2>
+                    <h3 class="text-2xl sm:text-3xl font-bold">Skills, ATS Platforms & Certifications</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4 border-b border-slate-700 pb-2">ATS & Tools</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Lever</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Greenhouse</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Ashby</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">ICIMS</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Workday</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">LinkedIn Recruiter</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4 border-b border-slate-700 pb-2">Technical & Sourcing</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">OSINT</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Extended Boolean</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Python</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">Prompt Engineering</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-md text-xs font-medium text-slate-200">HTML/CSS</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-300 uppercase tracking-wider mb-4 border-b border-slate-700 pb-2">Education & Credentials</h4>
+                        <p class="text-xs text-slate-300 mb-2"><strong>B.B.A. IT Management</strong> (Candidate) – WGU</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 bg-blue-900/60 text-blue-300 rounded text-xs font-medium">SHRM</span>
+                            <span class="px-2.5 py-1 bg-blue-900/60 text-blue-300 rounded text-xs font-medium">HRCI</span>
+                            <span class="px-2.5 py-1 bg-blue-900/60 text-blue-300 rounded text-xs font-medium">CompTIA</span>
+                            <span class="px-2.5 py-1 bg-blue-900/60 text-blue-300 rounded text-xs font-medium">ISC2 Candidate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <div class="text-lg font-bold text-brand-900">Alex Becz</div>
+                <div class="text-xs text-slate-500">Riverton, UT 84065 • 801.903.9097</div>
+            </div>
+
+            <div class="flex items-center space-x-6 text-sm">
+                <a href="https://www.linkedin.com/in/alxhb/" target="_blank" class="text-slate-600 hover:text-brand-accent transition-colors">LinkedIn</a>
+                <a href="https://www.github.com/septimius72" target="_blank" class="text-slate-600 hover:text-brand-accent transition-colors">GitHub</a>
+                <a href="https://proximoalex.weebly.com/" target="_blank" class="text-slate-600 hover:text-brand-accent transition-colors">Original Portfolio</a>
+                <a href="mailto:alexanderhbecz@gmail.com" class="text-slate-600 hover:text-brand-accent transition-colors">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Resume Modal -->
+    <div id="resume-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 shadow-2xl border border-slate-200">
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-6">
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-900">Alexander Becz</h3>
+                    <p class="text-xs font-semibold text-brand-accent">Sr. Technical Recruiter | TA Techie | Team Builder | OSINT</p>
+                </div>
+                <button onclick="closeResumeModal()" class="text-slate-400 hover:text-slate-700 p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="prose prose-slate text-sm space-y-4">
+                <p class="text-slate-600 leading-relaxed">
+                    Relentless talent acquisition leader with 12+ years delivering rapid, measurable impact for global tech organizations ranging from 60 to 5,000+ employees and up to $1B+ in annual revenue. Sourced & placed candidates across Software Engineering, AI/ML, Cybersecurity, Reverse Engineers, and Enterprise GTM Talent.
+                </p>
+                
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <h4 class="font-bold text-slate-800 text-xs uppercase tracking-wider mb-2">Contact Details</h4>
+                    <p class="text-xs text-slate-600">Location: Riverton, UT 84065</p>
+                    <p class="text-xs text-slate-600">Phone: 801.903.9097</p>
+                    <p class="text-xs text-slate-600">Email: alexanderhbecz@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-slate-200 flex justify-end space-x-3">
+                <button onclick="closeResumeModal()" class="px-4 py-2 text-sm font-semibold text-slate-600 hover:bg-slate-100 rounded-lg">Close</button>
+                <button onclick="copyToClipboard('alexanderhbecz@gmail.com', 'Contact details copied!')" class="px-4 py-2 text-sm font-semibold bg-brand-accent text-white rounded-lg hover:bg-blue-700 transition-colors">Copy Email</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(message);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+            toastMsg.innerText = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        function openResumeModal() {
+            const modal = document.getElementById('resume-modal');
+            modal.classList.remove('pointer-events-none', 'opacity-0');
+            modal.classList.add('opacity-100');
+        }
+
+        function closeResumeModal() {
+            const modal = document.getElementById('resume-modal');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('pointer-events-none', 'opacity-0');
+        }
+    </script>
+</body>
+</html>
